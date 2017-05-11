@@ -8,4 +8,4 @@ cd ./redis-manager-db
 docker build --no-cache -t redis-manager-db-seed ./
 
 # Run docker as deamon
-docker run -d --name redis-manager-db-seed --link redis-manager-db-seed:mongo -t redis-manager-db-seed
+docker run -d --name redis-manager-db-seed --link redis-manager-db:mongo -t redis-manager-db-seed
