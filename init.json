@@ -1,0 +1,108 @@
+[
+	{
+		"name": "Staging Cluster",
+		"nodes": [
+			{
+				"ipAddress": "172.24.40.8",
+				"port": 7001
+			},
+			{
+				"ipAddress": "172.24.40.8",
+				"port": 7002
+			},
+			{
+				"ipAddress": "172.24.40.8",
+				"port": 7003
+			},
+			{
+				"ipAddress": "172.24.40.8",
+				"port": 7004
+			},
+			{
+				"ipAddress": "172.24.40.8",
+				"port": 7005
+			},
+			{
+				"ipAddress": "172.24.40.8",
+				"port": 7006
+			},
+			{
+				"ipAddress": "172.24.40.8",
+				"port": 7007
+			},
+			{
+				"ipAddress": "172.24.40.8",
+				"port": 7008
+			}
+		]
+	},
+  {
+		"name": "Live Cluster",
+		"nodes": [
+			{
+				"ipAddress": "172.24.40.13",
+				"port": 7001
+			},
+			{
+				"ipAddress": "172.24.40.13",
+				"port": 7002
+			},
+			{
+				"ipAddress": "172.24.40.13",
+				"port": 7003
+			},
+			{
+				"ipAddress": "172.24.40.13",
+				"port": 7004
+			},
+			{
+				"ipAddress": "172.24.40.13",
+				"port": 7005
+			},
+			{
+				"ipAddress": "172.24.40.13",
+				"port": 7006
+			},
+			{
+				"ipAddress": "172.24.40.13",
+				"port": 7007
+			},
+			{
+				"ipAddress": "172.24.40.13",
+				"port": 7008
+			},
+			{
+				"ipAddress": "172.24.40.5",
+				"port": 7001
+			},
+			{
+				"ipAddress": "172.24.40.5",
+				"port": 7002
+			},
+			{
+				"ipAddress": "172.24.40.5",
+				"port": 7003
+			},
+			{
+				"ipAddress": "172.24.40.5",
+				"port": 7004
+			},
+			{
+				"ipAddress": "172.24.40.5",
+				"port": 7005
+			},
+			{
+				"ipAddress": "172.24.40.5",
+				"port": 7006
+			},
+			{
+				"ipAddress": "172.24.40.5",
+				"port": 7007
+			},
+			{
+				"ipAddress": "172.24.40.5",
+				"port": 7008
+			}
+		]
+	}
+]
