@@ -9,42 +9,6 @@ var argv = require('yargs').argv;
 var merge = require('merge-stream');
 var node_ssh = require('node-ssh');
 
-gulp.task('publish:source:tables', function () {
-    var config = {
-        host: argv.host,
-        port: 22,
-        username: argv.username,
-        password: argv.password
-    };
-
-    var gulpSSH = new GulpSSH({
-        ignoreErrors: false,
-        sshConfig: config
-    });
-
-    return gulp
-        .src(['./tables/**'])
-        .pipe(gulpSSH.dest(`/opt/${argv.service}/tables`));
-});
-
-gulp.task('publish:source:scripts', function () {
-    var config = {
-        host: argv.host,
-        port: 22,
-        username: argv.username,
-        password: argv.password
-    };
-
-    var gulpSSH = new GulpSSH({
-        ignoreErrors: false,
-        sshConfig: config
-    });
-
-    return gulp
-        .src(['./scripts/**'])
-        .pipe(gulpSSH.dest(`/opt/${argv.service}/scripts`));
-});
-
 gulp.task('publish:dockerfile', function () {
     var config = {
         host: argv.host,
@@ -59,7 +23,7 @@ gulp.task('publish:dockerfile', function () {
     });
 
     return gulp
-        .src(['./Dockerfile'])
+        .src(['./Dockerfile', './init.json'])
         .pipe(gulpSSH.dest(`/docker-uploads/${argv.service}`));
 });
 
@@ -105,21 +69,3 @@ gulp.task('docker:build', function (done) {
     });
 });
 
-gulp.task('docker:start', function (done) {
-    var ssh = new node_ssh();
-
-    ssh.connect({
-        host: argv.host,
-        username: argv.username,
-        password: argv.password
-    }).then(function () {
-        ssh.execCommand(`docker start ${argv.service}`).then(function (result) {
-            ssh.dispose();
-            done();
-        }).catch(function (err) {
-            done(err);
-        });
-    }).catch(function (err) {
-        done(err);
-    });
-});

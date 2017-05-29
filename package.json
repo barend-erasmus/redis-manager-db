@@ -1,0 +1,31 @@
+{
+  "name": "redis-manager-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barend-erasmus/redis-manager-db.git"
+  },
+  "author": "Barend Erasmus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barend-erasmus/redis-manager-db/issues"
+  },
+  "homepage": "https://github.com/barend-erasmus/redis-manager-db#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-ssh": "^0.6.0",
+    "gulp-typescript": "^3.1.7",
+    "merge-stream": "^1.0.1",
+    "node-ssh": "^4.2.2",
+    "run-sequence": "^1.2.2",
+    "typescript": "^2.3.3",
+    "yargs": "^8.0.1"
+  }
+}
