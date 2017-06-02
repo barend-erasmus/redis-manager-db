@@ -1,0 +1,27 @@
+{
+    "machine": {
+        "host": "$host",
+        "username": "$username",
+        "password": "$password"
+    },
+    "commands": [
+        "docker stop redis-manager-db",
+        "docker rm redis-manager-db",
+        "docker stop redis-manager-db-seed",
+        "docker rm redis-manager-db-seed",
+        "docker build -t redis-manager-db-seed /docker-uploads/redis-manager-db-seed",
+        "docker run --name redis-manager-db -d mongo",
+        "docker run -d --name redis-mangager-db-seed --link redis-manager-db:mongo -t redis-mangager-db-seed"
+    ],
+    "directories": [],
+    "files": [
+        {
+            "source": "$workspace/Dockerfile",
+            "destination": "/docker-uploads/redis-manager-db-seed/Dockerfile"
+        },
+        {
+            "source": "$workspace/init.json",
+            "destination": "/docker-uploads/redis-manager-db-seed/init.json"
+        }
+    ]
+}
